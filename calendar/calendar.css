@@ -1,19 +1,33 @@
 .container {
-    width: 100%;
-    height: 100vh;
-    background-color: #12121f;
-    color: #eee;
+    
     display: flex;
+    margin-top: 10px;
     justify-content: center;
     align-items: center;
   }
   
 
   .calendar {
-    width: 45rem;
-    height: 52rem;
-    background-color: #222227;
-    box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
+    margin-top: 20px;
+    margin-bottom: 30px;
+    width: 720px;
+    height: 800px;
+    background-color: #000;
+    box-shadow: 0 1px 20px #3c3c3c;
+    border-radius: 10px;
+  }
+
+  .date {
+    
+    height: 200px;
+    background-color:#060032;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    text-align: center;
+    text-shadow: 0 4.8px 8px #3c3c3c;
+    border-radius: 10px;
   }
 
   .date h3 {
@@ -81,4 +95,8 @@
   .prev-date,
     .next-date {
     opacity: 0.5;
+    }
+
+    .today {
+      background-color:#060032;
     }

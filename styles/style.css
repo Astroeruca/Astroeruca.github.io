@@ -94,7 +94,7 @@ img {
 
 
 .section {
-    border-radius: 10px;
+    border-radius: 5px;
     display: block;
     border-width: 5px;
     border-style: outset;
@@ -105,7 +105,7 @@ img {
 
 .time {
     background-color: #151515c1;
-    border-radius: 10px;
+    border-radius: 5px;
     margin: 10px;
 }
 

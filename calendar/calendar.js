@@ -21,15 +21,29 @@ const months = [
 
 function renderCalendar() {
   date.setDate(1);
+
   var daystag = document.querySelector(".days");
   var days = "";
 
   var firstDayWeek = date.getDay();
-  var lastDayWeek = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDay();
 
-  var lastDate = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
+  var lastDayWeek = new Date(
+    date.getFullYear(), 
+    date.getMonth() + 1, 
+    0
+  ).getDay();
 
-  var prevLastDate = new Date(date.getFullYear(), date.getMonth(), 0).getDate();
+  var lastDate = new Date(
+    date.getFullYear(), 
+    date.getMonth() + 1, 
+    0
+  ).getDate();
+
+  var prevLastDate = new Date(
+    date.getFullYear(), 
+    date.getMonth(), 
+    0
+  ).getDate();
 
   var nextDates = 7 - lastDayWeek - 1;
 
@@ -38,20 +52,28 @@ function renderCalendar() {
 
 
 
-  for (var i = 0; i < firstDayWeek; i++)
+  for (var i = 1; i <= firstDayWeek; i++)
   {
-    days += `<div class="prevdate">${prevLastDate - firstDayWeek + i}</div>`;
-  };
+    days += `<div class="prev-date">${prevLastDate - firstDayWeek + i}</div>`;
+  }
 
   for (var i = 1; i <= lastDate; i++)
   {
-    days += `<div>${i}</div>`;
-  };
+    if (
+      i === new Date().getDate() &&
+      date.getMonth() === new Date().getMonth()
+    ) {
+      days += `<div class="today">${i}</div>`;
+    } else {
+      days += `<div>${i}</div>`;
+    }
+  }
 
   for (var i = 1; i <= nextDates; i++)
   {
-    days += `<div class="nextdate>${i}</div>`
-  };
+    days += `<div class="next-date">${i}</div>`;
+  }
+
   daystag.innerHTML = days;
 };
 
