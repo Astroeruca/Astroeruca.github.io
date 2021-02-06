@@ -1,0 +1,17 @@
+.fix {
+    position: fixed;
+    z-index: 20;
+    left:900px;
+    top:0px;
+}
+
+.carousel-caption {
+    background-color: #151515c1;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 0px;
+}
+
+.nav-link {
+    margin: 10px;
+}

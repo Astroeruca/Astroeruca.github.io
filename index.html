@@ -5,12 +5,16 @@
 
     <head>
         <title>
-            Spaceflight
+            Astroeruca|Spaceflight Calender
         </title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" >
-        <link rel="stylesheet" href="styles/style.css" >
-        <link rel="stylesheet" href="sidebar/sidebar.css">
-        <link rel="stylesheet" href="calendar/calendar.css">
+        <link rel="stylesheet" href="styles/style.css">
+        <link rel="stylesheet" href="styles/sections.css">
+        <link rel="stylesheet" href="styles/index.css.css">
+        <link rel="stylesheet" href="js-sections/sidebar/sidebar.css">
+        <link rel="stylesheet" href="js-sections/calendar/calendar.css">
+        <link rel="stylesheet" href="js-sections/time/time.css">
+        
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         
@@ -29,7 +33,7 @@
             <div class="container-fluid">
 
 
-              <a class="navbar-brand" href="index.html">Spaceflight</a>
+              <a class="navbar-brand" href="index.html"><img class="logo" src="logo.png"></a>
 
 
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,7 +44,7 @@
                   <li class="nav-item">
 
 
-                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    <a class="nav-link active" aria-current="page" href="index.html">Astroeruca Home</a>
 
 
                   </li>
@@ -60,7 +64,7 @@
                 </ul>
                 <div class="time">
                   <p class="post-text">Date/Time: <span id="time"></span></p>
-                  <p class="post-text">TImezone: <span id="zone"></span> </p>
+                  <p class="post-text">Timezone: UTC-<span id="zonenumber"></span> </p>
 
                   
                 </div>
@@ -71,6 +75,10 @@
               </div>
             </div>
           </nav>
+
+          <div class="title">
+            
+          </div>
 
 
           <div class="alert tertiary" role="alert" >
@@ -92,9 +100,9 @@
 
     <body>
       <div id="side-bar" class="section secondary side-bar">
-        <h2 class="side-header">
-          Side Navigation
-        </h2>
+          <h2 class="side-header">
+            Side Navigation
+          </h2>
         <a href="javascript:void(0)" class="close-side" onclick="togleNav()"><h4>&lt</h4></a>
         <a href="sidebar.html">stuff</a>
         <a href="#">stuff</a>
@@ -172,33 +180,76 @@
           </div>
         </div>
       </div>
-      <div class="container-fluid">
+
+      <br>
+
+      <div class=" secondary container-fluid">
         <div class="row">
-          <div class="secondary section col-6 edge left">
+          <div class="section edge left">
             <div class="section-body">
-              <h2 class="center-text">Today's Events</h2>
-              <div class="post">
+              <h1 class="center-text">Upcoming</h1>
+              <div class="row">
+                <div class="post col-4">
 
-                <h3 class="post-header">
-                  Event
-                </h3>
-                <p class="post-text">Event description</p>
-                <img class="post-image" src="images/moon.jpg" alt="Falcon 9">
+                  <h3 class="post-header">
+                    Launch
+                  </h3>
+                  <p class="post-text">Launch time</p>
+                  <img class="post-image" src="images/heavy.jpg" alt="Falcon 9">
 
+                </div>
+                <div class="post col-4">
+
+                  <h3 class="post-header">
+                    Event
+                  </h3>
+                  <p class="post-text">Event description</p>
+                  <img class="post-image" src="images/moon.jpg" alt="Falcon 9">
+
+                </div>
+                <div class="post col-4">
+
+                  <h3 class="post-header">
+                    Launch
+                  </h3>
+                  <p class="post-text">Launch time</p>
+                  <img class="post-image" src="images/heavy.jpg" alt="Falcon 9">
+
+                </div>
               </div>
-              <div class="post">
+              <div class="row">
+                <div class="post col-4">
 
-                <h3 class="post-header">
-                  Event
-                </h3>
-                <p class="post-text">Event description</p>
-                <img class="post-image" src="images/moon.jpg" alt="Falcon 9">
+                  <h3 class="post-header">
+                    Launch
+                  </h3>
+                  <p class="post-text">Launch time</p>
+                  <img class="post-image" src="images/heavy.jpg" alt="Falcon 9">
 
+                </div>
+                <div class="post col-4">
+
+                  <h3 class="post-header">
+                    Event
+                  </h3>
+                  <p class="post-text">Event description</p>
+                  <img class="post-image" src="images/moon.jpg" alt="Falcon 9">
+
+                </div>
+                <div class="post col-4">
+
+                  <h3 class="post-header">
+                    Launch
+                  </h3>
+                  <p class="post-text">Launch time</p>
+                  <img class="post-image" src="images/heavy.jpg" alt="Falcon 9">
+
+                </div>
               </div>
               
             </div>
           </div>
-          <div class="secondary section col-6 edge right">
+          <!-- <div class="secondary section col-6 edge right">
             <div class="section-body">
               <h2 class="center-text">Upcoming launches</h2>
               <div class="post">
@@ -221,38 +272,77 @@
               </div>
               
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
 
 
-      <div class="container-fluid">
+      <div class=" secondary container-fluid">
         <div class="row">
-          <div class="secondary section col-6 edge left">
+          <div class="section edge left">
             <div class="section-body">
-              <h2 class="center-text">Recent Events</h2>
-              <div class="post">
+              <h1 class="center-text">Recent Events</h1>
+              <div class="row">
+                <div class="post col-4">
 
-                <h3 class="post-header">
-                  Event
-                </h3>
-                <p class="post-text">Event description</p>
-                <img class="post-image" src="images/moon.jpg" alt="Falcon 9">
+                  <h3 class="post-header">
+                    Launch
+                  </h3>
+                  <p class="post-text">Launch time</p>
+                  <img class="post-image" src="images/heavy.jpg" alt="Falcon 9">
 
+                </div>
+                <div class="post col-4">
+
+                  <h3 class="post-header">
+                    Event
+                  </h3>
+                  <p class="post-text">Event description</p>
+                  <img class="post-image" src="images/moon.jpg" alt="Falcon 9">
+
+                </div>
+                <div class="post col-4">
+
+                  <h3 class="post-header">
+                    Launch
+                  </h3>
+                  <p class="post-text">Launch time</p>
+                  <img class="post-image" src="images/heavy.jpg" alt="Falcon 9">
+
+                </div>
               </div>
-              <div class="post">
+              <div class="row">
+                <div class="post col-4">
 
-                <h3 class="post-header">
-                  Event
-                </h3>
-                <p class="post-text">Event description</p>
-                <img class="post-image" src="images/moon.jpg" alt="Falcon 9">
+                  <h3 class="post-header">
+                    Launch
+                  </h3>
+                  <p class="post-text">Launch time</p>
+                  <img class="post-image" src="images/heavy.jpg" alt="Falcon 9">
 
+                </div>
+                <div class="post col-4">
+
+                  <h3 class="post-header">
+                    Event
+                  </h3>
+                  <p class="post-text">Event description</p>
+                  <img class="post-image" src="images/moon.jpg" alt="Falcon 9">
+
+                </div>
+                <div class="post col-4">
+
+                  <h3 class="post-header">
+                    Launch
+                  </h3>
+                  <p class="post-text">Launch time</p>
+                  <img class="post-image" src="images/heavy.jpg" alt="Falcon 9">
+
+                </div>
               </div>
-              
             </div>
           </div>
-          <div class="secondary section col-6 edge right">
+          <!-- <div class="secondary section col-6 edge right">
             <div class="section-body">
               <h2 class="center-text">Recent launches</h2>
               <div class="post">
@@ -275,7 +365,7 @@
               </div>
               
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
 
@@ -315,9 +405,9 @@
 
       
 
-      <script src="sidebar/sidebar.js"></script>
-      <script src="time/time.js"></script>
-      <script src="calendar/calendar.js"></script>
+      <script src="js-sections/sidebar/sidebar.js"></script>
+      <script src="js-sections/time/time.js"></script>
+      <script src="js-sections/calendar/calendar.js"></script>
     </body>
 
     

@@ -27,6 +27,6 @@ var interval = setInterval(timer ,1000);
     function timer() {
     var time = new Date();
     document.getElementById("time").innerHTML = time.toLocaleString();
-    document.getElementById("zone").innerHTML = time.getTimezoneOffset() / 60;
+    document.getElementById("zonenumber").innerHTML = time.toString().match(/([A-Z]+[\+-][0-9]+.*)/)[1];
 
 }
